@@ -1,3 +1,10 @@
-_site/
-.sass-cache/
-.jekyll-metadata
+/.project
+/.classpath
+/.settings
+/_site/
+/.sass-cache/
+/.jekyll-metadata
+Gemfile.lock
+/dist/bootstrap
+/dist/jquery
+
