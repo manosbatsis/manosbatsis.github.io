@@ -3,7 +3,7 @@ name: "Manos Batsis"
 # current version of the software
 version: 2.0-SNAPSHOT
 # url of the download button
-downloadUrl: https://github.com/abissgr/calipso-hub
+downloadUrl:
 # licence of the software
 license: GNU AGPLv3
 licenseUrl: https://opensource.org/licenses/AGPL-3.0
