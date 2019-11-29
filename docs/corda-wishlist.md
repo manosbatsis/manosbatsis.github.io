@@ -11,13 +11,13 @@ A few things I'd like to see or develop around Corda.
 		- [Provide Daily Snapshots](#provide-daily-snapshots)
 		- [Guarantee Reproducible Builds](#guarantee-reproducible-builds)
 		- [Versioning Strategy](#versioning-strategy)
+		- [Sync Enterprise/OS](#sync-enterpriseos)
 	- [Cordapp Conventions](#cordapp-conventions)
 		- [Standardise Configuration](#standardise-configuration)
 		- [Flow APIs Consistency](#flow-apis-consistency)
 	- [Community Relations](#community-relations)
 		- [Ensure Feedback](#ensure-feedback)
 		- [Utilize non-R3 Devs](#utilize-non-r3-devs)
-		- [Sync Enterprise/OS](#sync-enterpriseos)
 - [Development Ideas](#development-ideas)
 
 <!-- /TOC -->
@@ -71,6 +71,11 @@ Enforce a minimal versioning strategy troughout Corda repos where a minor versio
 change the API or is backwards compatible. Increment major versions for incompatible API changes.
 This will help Corda developers maintain dependencies in their projects.
 
+#### Sync Enterprise/OS
+
+It's frustrating for paying customers of enterprise to see a Corda repo requires the latest OS version
+without a Corda Enterprise equivalent being available.
+
 ### Cordapp Conventions
 
 #### Standardise Configuration
@@ -98,11 +103,6 @@ Currently some important repos seem abandoned or unmaintained in that regard.
 #### Utilize non-R3 Devs
 
 Investigate a policy for non-R3 commiters.
-
-#### Sync Enterprise/OS
-
-It's frustrating for paying customers of enterprise to see a Corda repo requires the latest OS version
-without a Corda Enterprise equivalent being available.
 
 ## Development Ideas
 
