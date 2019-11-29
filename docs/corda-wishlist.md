@@ -92,6 +92,8 @@ in layers as appropriate:
 - Inline flows that accept and reuse sessions but probably create their own `TransactionBuilder`
 - Utility methods that accept a `TransactionBuilder` to add the appropriate items
 
+The latter is important for building "atomic transactions", i like to think this started it: 
+https://github.com/corda/token-sdk/issues/19
 
 ### Community Relations
 
