@@ -17,6 +17,7 @@ A few things I'd like to see or develop around Corda.
 	- [Community Relations](#community-relations)
 		- [Ensure Feedback](#ensure-feedback)
 		- [Utilize non-R3 Devs](#utilize-non-r3-devs)
+		- [Sync Enterprise/OS](#sync-enterpriseos)
 - [Development Ideas](#development-ideas)
 
 <!-- /TOC -->
@@ -97,6 +98,11 @@ Currently some important repos seem abandoned or unmaintained in that regard.
 #### Utilize non-R3 Devs
 
 Investigate a policy for non-R3 commiters.
+
+#### Sync Enterprise/OS
+
+It's frustrating for paying customers of enterprise to see a Corda repo requires the latest OS version
+without a Corda Enterprise equivalent being available.
 
 ## Development Ideas
 
