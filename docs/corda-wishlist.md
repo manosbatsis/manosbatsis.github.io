@@ -135,6 +135,9 @@ State-less RBAC uses annotations in encumbered states (see `PrincipalState` abov
 
 Provide a cordapp API for managing roles within and beyond the scope of a single contract (see State-less RBAC above).
 
+#### Contract Utils
+
+Provide utils for contracts to verify stateless or cordapp-based RBAC constraints, both type and field level
 
 ### CDL DSL
 
