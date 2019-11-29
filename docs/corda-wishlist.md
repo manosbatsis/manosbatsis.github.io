@@ -14,6 +14,9 @@ A few things I'd like to see or develop around Corda.
 	- [Cordapp Conventions](#cordapp-conventions)
 		- [Standardise Configuration](#standardise-configuration)
 		- [Flow APIs Consistency](#flow-apis-consistency)
+	- [Community Relations](#community-relations)
+		- [Ensure Feedback](#ensure-feedback)
+		- [Utilize non-R3 Devs](#utilize-non-r3-devs)
 - [Development Ideas](#development-ideas)
 
 <!-- /TOC -->
@@ -82,6 +85,18 @@ in layers as appropriate:
 - `StartableByRPC`/`InitiatingFlow` flow versions that can be used as is, i.e. with their own sessions and `TransactionBuilder`
 - Inline flows that accept and reuse sessions but probably create their own `TransactionBuilder`
 - Utility methods that accept a `TransactionBuilder` to add the appropriate items
+
+
+### Community Relations
+
+#### Ensure Feedback
+
+Assign responsibility to ensure github issues get at least some response by R3 developers.
+Currently some important repos seem abandoned or unmaintained in that regard.
+
+#### Utilize non-R3 Devs
+
+Investigate a policy for non-R3 commiters.
 
 ## Development Ideas
 
