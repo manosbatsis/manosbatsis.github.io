@@ -97,7 +97,7 @@ in layers as appropriate:
 
 #### Ensure Feedback
 
-Assign responsibility to ensure github issues get at least some response by R3 developers.
+Assign responsibility to ensure github issues get at least some __timely__ response by R3 developers.
 Currently some important repos seem abandoned or unmaintained in that regard.
 
 #### Utilize non-R3 Devs
