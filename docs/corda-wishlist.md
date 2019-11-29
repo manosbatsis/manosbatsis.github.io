@@ -19,6 +19,11 @@ A few things I'd like to see or develop around Corda.
 		- [Ensure Feedback](#ensure-feedback)
 		- [Utilize non-R3 Devs](#utilize-non-r3-devs)
 - [Development Ideas](#development-ideas)
+	- [RBAC SDK](#rbac-sdk)
+		- [PrincipalState](#principalstate)
+		- [State-less RBAC](#state-less-rbac)
+		- [RBAC Cordapp](#rbac-cordapp)
+	- [CDL DSL](#cdl-dsl)
 
 <!-- /TOC -->
 
@@ -92,7 +97,7 @@ in layers as appropriate:
 - Inline flows that accept and reuse sessions but probably create their own `TransactionBuilder`
 - Utility methods that accept a `TransactionBuilder` to add the appropriate items
 
-The latter is important for building "atomic transactions", i like to think this started it: 
+The latter is important for building "atomic transactions", i like to think this started it:
 https://github.com/corda/token-sdk/issues/19
 
 ### Community Relations
@@ -108,4 +113,45 @@ Investigate a policy for non-R3 commiters.
 
 ## Development Ideas
 
-TBD
+### RBAC SDK
+
+Provide different levels of RBAC for cordapps.
+
+#### PrincipalState
+
+Provide an inline flow or utility method to attach a `PrincipalState` as an encumbrance state
+to the current TX. The role of the state is to capture the initiating party as Corda does not
+provide an API for contract code to determine who initiated a flow (?).
+
+#### State-less RBAC
+
+State-less RBAC uses annotations in encumbered states (see `PrincipalState` above) to:
+
+- Define contract-scoped roles and how they can be matched to parties for a state instance
+- Define the transision statuses (can optionally match commands)
+- Define class and field level permissions per role/status combination (non-null, immutable, updatable and so on)
+
+#### RBAC Cordapp
+
+Provide a cordapp API for managing roles within and beyond the scope of a single contract (see State-less RBAC above).
+
+
+### CDL DSL
+
+Provide a Corda Design Language-oriented Kotlin DSL to:
+
+- Describe/generate state classes (or supertypes/interfaces)
+- Define state machine semantics to describe transactions and state evolution
+- Describe signature, participation, transition (thing status) and other constraints: state (SLC), transaction(TLC), visibility (VC) and multiplicity constraints
+- Generate contract (or supertypes), commands and verification methods per status
+- Generate Corda Design Language diagrams as code (plantuml): state machine, state evolution, transaction boxes and so on
+
+The idea is to use the DSL to maintain contracts or components thereof, thus enabling contract-driven development
+(as in test driven development). The DSL would probably be used at build-time
+by annotation processors.
+
+Requirements:
+
+- Reduce code maintenance down to pure semantics as much as possible
+- Optionally utilise RBAC SDK (see above)
+- Allow developers to override/extend any generated bit
