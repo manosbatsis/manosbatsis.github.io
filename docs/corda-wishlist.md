@@ -146,7 +146,7 @@ Provide a Corda Design Language-oriented Kotlin DSL to:
 - Describe/generate state classes (or supertypes/interfaces)
 - Define state machine semantics to describe transactions and state evolution
 - Describe signature, participation, transition (thing status) and other constraints: state (SLC), transaction(TLC), visibility (VC) and multiplicity constraints
-- Generate contract (or supertypes), commands and verification methods per status
+- Generate contract (or supertypes), commands and base verification methods per status
 - Generate Corda Design Language diagrams as code (plantuml): state machine, state evolution, transaction boxes and so on
 
 The idea is to use the DSL to maintain contracts or components thereof, thus enabling contract-driven development
