@@ -166,8 +166,8 @@ Provide a Corda Design Language-oriented Kotlin DSL to:
 - Generate contract (or supertypes), commands and base verification methods per status
 - Generate Corda Design Language diagrams as code (plantuml): state machine, state evolution, transaction boxes and so on
 
-The idea is to use the DSL to maintain contracts or components thereof, thus enabling contract-driven development
-(as in test driven development). The DSL would probably be used at build-time
+The idea is to use the DSL to maintain contracts or components thereof (think DAML etc.), 
+thus enabling contract-driven development. The DSL would probably be used at build-time
 by annotation processors.
 
 Requirements:
