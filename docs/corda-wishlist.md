@@ -115,7 +115,7 @@ Investigate a policy for non-R3 commiters.
 
 ### RBAC SDK
 
-Provide different levels of RBAC for cordapps.
+Provide different levels of Role-Based Access Control for cordapps.
 
 #### PrincipalState
 
@@ -127,9 +127,26 @@ provide an API for contract code to determine who initiated a flow (?).
 
 State-less RBAC uses annotations in encumbered states (see `PrincipalState` above) to:
 
-- Define contract-scoped roles and how they can be matched to parties for a state instance
+- Define contract-scoped roles and how they can be matched to parties for a state instance:
+
+```kotlin
+    data class FoobarState(
+        override val linearId: UniqueIdentifier,
+        @Role(Roles.BUYER)
+        val buyer: Party,
+        @Role(Roles.SELLER)
+        val seller: Party
+    ) : LinearState {
+
+        override val participants: List<AbstractParty>
+            get() = listOf(buyer, seller)
+
+    }
+```
 - Define the transision statuses (can optionally match commands)
 - Define class and field level permissions per role/status combination (non-null, immutable, updatable and so on)
+
+
 
 #### RBAC Cordapp
 
